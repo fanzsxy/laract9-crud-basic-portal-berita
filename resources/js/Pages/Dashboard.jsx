@@ -45,16 +45,16 @@ export default function Dashboard(props) {
                             </div>
                         </div>
                         }
-                        <input type="text" placeholder="Judul" className="m-2 input input-bordered w-full" onChange={(title) => setTitle(title.target.value)} value={title} />
-                        <input type="text" placeholder="Deskripsi" className="m-2 input input-bordered w-full" onChange={(description) => setDescription(description.target.value)} value={description} />
-                        <input type="text" placeholder="Kategori" className="m-2 input input-bordered w-full" onChange={(category) => setCategory(category.target.value)} value={category} />
+                        <input type="text" placeholder="Judul" className="m-2 input input-bordered w-full bg-secondary-content" onChange={(title) => setTitle(title.target.value)} value={title} />
+                        <input type="text" placeholder="Deskripsi" className="m-2 input input-bordered w-full bg-secondary-content" onChange={(description) => setDescription(description.target.value)} value={description} />
+                        <input type="text" placeholder="Kategori" className="m-2 input input-bordered w-full bg-secondary-content" onChange={(category) => setCategory(category.target.value)} value={category} />
                         <button className='btn btn-primary m-2' onClick={() => handleSubmit()}>SUBMIT</button>
                     </div>
                 </div>
                 <div className="p-4">
                     {props.myNews && props.myNews.length > 0 ? props.myNews.map((news, i) => {
                         return (
-                            <div key={i} className="card w-full lg:w-96 bg-base-100 shadow-xl m-2">
+                            <div key={i} className="card w-full max-w-7xl mx-auto bg-secondary-content shadow-xl m-2">
                                 <div className="card-body">
                                     <h2 className="card-title">
                                         {news.title}
